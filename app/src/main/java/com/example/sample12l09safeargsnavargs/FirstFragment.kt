@@ -30,7 +30,8 @@ class FirstFragment : Fragment() {
 
         binding.button.setOnClickListener {
 //            arguments = bundleOf(SecondFragment.KEY_INFO to Random.nextInt().toString())
-            val direction = FirstFragmentDirections.toFragmentSecond(Random.nextInt().toString())
+            val direction = FirstFragmentDirections
+                .toFragmentSecond(Random.nextInt(), Random.nextInt().toString())
             findNavController()
                 .navigate(direction
                     /*R.id.to_fragment_second,

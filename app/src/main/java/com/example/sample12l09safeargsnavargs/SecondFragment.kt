@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import com.example.sample12l09safeargsnavargs.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
 
     private var _binding: FragmentSecondBinding? = null
     private val binding: FragmentSecondBinding get() = requireNotNull(_binding)
+    private val args by navArgs<SecondFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,7 +27,8 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textView.append(requireArguments().getString("info"))
+        binding.textView.text = args.intInfo.toString() + "abc" + args.stringInfo
+//        append(requireArguments().getString("info"))
     }
 
     override fun onDestroyView() {

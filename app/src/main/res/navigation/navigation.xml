@@ -22,7 +22,11 @@
         tools:layout="@layout/fragment_second">
 
         <argument
-            android:name="info"
+            android:name="int_info"
+            app:argType="integer"/>
+
+        <argument
+            android:name="string_info"
             app:argType="string"/>
 
     </fragment>
