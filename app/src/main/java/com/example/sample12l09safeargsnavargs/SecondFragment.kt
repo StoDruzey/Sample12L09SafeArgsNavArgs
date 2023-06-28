@@ -25,7 +25,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textView.append(requireArguments().getString(KEY_INFO))
+        binding.textView.append(requireArguments().getString("info"))
     }
 
     override fun onDestroyView() {
@@ -34,7 +34,7 @@ class SecondFragment : Fragment() {
         _binding = null
     }
 
-    companion object {
-        const val KEY_INFO = "key_info"
-    }
+//    companion object {
+//        const val KEY_INFO = "key_info"
+//    }
 }
